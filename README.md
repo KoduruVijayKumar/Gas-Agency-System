@@ -1,171 +1,167 @@
 # GasFlow - Online Gas Delivery Platform
 
-A modern, full-featured web application for booking and managing gas delivery services. Built with Next.js, React, and Tailwind CSS.
+**🌐 Live Website:** https://gas-agency-system-mjd3.vercel.app
 
-## Live Demo Features
+---
 
-- Professional landing page with service overview
-- User authentication (signup/login)
-- Real-time booking system with multiple gas types
-- Payment gateway integration (Card, UPI, Wallet)
-- User dashboard with order tracking
-- Admin dashboard with booking management
-- Responsive design for all devices
+## What is GasFlow?
+
+GasFlow is a modern web application for booking and managing gas delivery services. Users can book gas, make payments, and track orders. Admins can manage bookings and assign drivers.
+
+---
+
+## Features
+
+### User Features
+- Create account & login
+- Book gas with date/time selection
+- Multiple payment methods (Card, UPI, Wallet)
+- Track order status
+- View booking history
+- Manage profile
+
+### Admin Features
+- View all bookings
+- Update delivery status
+- Assign drivers
+- See analytics & revenue
+- Manage customers
+
+---
+
+## Demo Login
+
+**User Account:**
+\`\`\`
+Email: user@example.com
+Password: (any password)
+\`\`\`
+
+**Admin Account:**
+\`\`\`
+Email: admin@gasflow.com
+Password: admin123
+\`\`\`
+
+---
 
 ## Quick Start
 
-### Prerequisites
-- Node.js 18+ installed
-- npm or yarn
-
-### Installation
+### Install & Run Locally
 
 \`\`\`bash
-# Clone the repository
-git clone <your-repo-url>
-cd gasflow
+# Clone repo
+git clone https://github.com/KoduruVijayKumar/Gas-Agency-System.git
+cd Gas-Agency-System
 
 # Install dependencies
 npm install
 
-# Run development server
+# Start development server
 npm run dev
 \`\`\`
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Visit http://localhost:3000
 
-## Demo Credentials
-
-### User
-- Email: user@example.com
-- Password: Any password (demo signup enabled)
-
-### Admin
-- Email: admin@gasflow.com
-- Password: admin123
-
-## Build for Production
+### Build for Production
 
 \`\`\`bash
 npm run build
 npm start
 \`\`\`
 
+---
+
+## Tech Stack
+
+- **Frontend:** Next.js 16, React 19, TypeScript
+- **Styling:** Tailwind CSS v4
+- **UI Components:** shadcn/ui
+- **Deployment:** Vercel
+
+---
+
 ## Project Structure
 
 \`\`\`
-gasflow/
-├── app/
-│   ├── page.tsx                    # Landing page
-│   ├── layout.tsx                  # Root layout
-│   ├── globals.css                 # Global styles
-│   ├── auth/
-│   │   ├── login/page.tsx          # User login
-│   │   ├── signup/page.tsx         # User signup
-│   │   └── admin-login/page.tsx    # Admin login
-│   └── dashboard/
-│       ├── user/
-│       │   ├── page.tsx            # User dashboard
-│       │   ├── bookings/page.tsx   # Bookings list
-│       │   ├── book/page.tsx       # Booking form
-│       │   ├── payment/page.tsx    # Payment page
-│       │   └── profile/page.tsx    # Profile page
-│       └── admin/
-│           ├── page.tsx            # Admin dashboard
-│           └── bookings/page.tsx   # Admin bookings
-├── components/
-│   ├── user-sidebar.tsx            # User navigation
-│   ├── admin-sidebar.tsx           # Admin navigation
-│   └── ui/                         # UI components
-├── lib/
-│   └── utils.ts                    # Utilities
-└── public/                         # Static files
+app/
+├── page.tsx                    # Landing page
+├── auth/
+│   ├── login/page.tsx         # User login
+│   ├── signup/page.tsx        # User signup
+│   └── admin-login/page.tsx   # Admin login
+└── dashboard/
+    ├── user/
+    │   ├── page.tsx           # User dashboard
+    │   ├── bookings/page.tsx  # Booking list
+    │   ├── book/page.tsx      # Create booking
+    │   ├── payment/page.tsx   # Payment
+    │   └── profile/page.tsx   # User profile
+    └── admin/
+        ├── page.tsx           # Admin dashboard
+        └── bookings/page.tsx  # Admin bookings
+
+components/
+├── user-sidebar.tsx           # User navigation
+├── admin-sidebar.tsx          # Admin navigation
+└── ui/                        # UI components
 \`\`\`
 
-## Technologies Used
+---
 
-- **Frontend**: Next.js 16, React 19.2, TypeScript
-- **Styling**: Tailwind CSS v4
-- **UI Components**: shadcn/ui
-- **Icons**: Lucide React
-- **Animations**: Tailwind CSS animations
-- **Forms**: Native HTML forms with validation
+## How to Deploy on Vercel (Free)
 
-## Features
+1. Push your code to GitHub
+2. Go to https://vercel.com/new
+3. Select "Import Git Repository"
+4. Choose "Gas-Agency-System"
+5. Click "Deploy"
+6. Your live website is ready!
 
-### User Features
-✓ Landing page with features showcase
-✓ User registration and login
-✓ Dashboard with statistics
-✓ Book gas delivery
-✓ Multiple gas types (14kg, 5kg, Piped)
-✓ Date/time slot selection
-✓ Address management
-✓ Payment processing (Card, UPI, Wallet)
-✓ Order history and tracking
-✓ Profile management
-
-### Admin Features
-✓ Admin login
-✓ Dashboard with key metrics
-✓ Booking management
-✓ Driver assignment
-✓ Order tracking
-✓ Revenue analytics
-✓ Customer management
-
-## Deployment
-
-### Vercel (Recommended)
-1. Push to GitHub
-2. Import project in Vercel
-3. Deploy with one click
-
-### Other Platforms
-- Netlify
-- AWS
-- DigitalOcean
-- Heroku
-
-See DEPLOYMENT_GUIDE.md for detailed instructions.
-
-## Future Enhancements
-
-- Payment gateway integration (Paytm, Razorpay)
-- Real-time SMS/Email notifications
-- Live tracking with maps
-- Driver management system
-- Customer support chat
-- Advanced analytics
-- Mobile app version
+---
 
 ## Troubleshooting
 
-**Port 3000 already in use?**
+### Port 3000 already in use?
 \`\`\`bash
+# Kill process using port 3000
 lsof -ti:3000 | xargs kill -9
-npm run dev
 \`\`\`
 
-**Build errors?**
+### Build errors?
 \`\`\`bash
 rm -rf .next node_modules
 npm install
 npm run dev
 \`\`\`
 
-## Contributing
+---
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+## Future Enhancements
 
-## License
-
-MIT License - feel free to use this project for personal or commercial purposes.
-
-## Support
-
-For support, issues, or feature requests, please open an issue on GitHub.
+- Real payment gateway (Paytm/Razorpay)
+- Email & SMS notifications
+- Live GPS tracking
+- Driver app
+- Rating & reviews
+- Subscription plans
 
 ---
 
-**Made with ❤️ by GasFlow Team**
+## Support
+
+- **GitHub:** https://github.com/KoduruVijayKumar/Gas-Agency-System
+- **Report Issues:** https://github.com/KoduruVijayKumar/Gas-Agency-System/issues
+- **Email:** support@gasflow.com
+
+---
+
+## License
+
+MIT License - Free to use and modify
+
+
+Created By
+K.Vijay Kumar Reddy
+
+THANK YOU
